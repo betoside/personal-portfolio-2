@@ -68,6 +68,16 @@ var swiper = new Swiper(".client-swiper", {
 //Website dark/light theme
 
 //Scroll to top button
+const scrollToTopBtn = document.querySelector('.scrollToTop-btn');
+
+window.addEventListener('scroll', function(){
+    scrollToTopBtn.classList.toggle('active', window.scrollY > 500);
+});
+
+scrollToTopBtn.addEventListener('click', () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+});
 
 //Navigation menu items active on page scroll
 
